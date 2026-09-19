@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="485" viewBox="0 0 900 485" role="img" aria-labelledby="title desc">
+<title id="title">Reported regression t-statistics by pre-expiration lookback</title>
+<desc id="desc">Line chart comparing reported OPEX and VIX-expiration regression t-statistics for 3, 5, 7, 10, 14, and 21 day lookbacks. OPEX values are -1.80, -2.40, -2.11, -2.83, -3.96 and -3.76; VIX values are -0.33, 0.41, 0.36, -1.05, zero and -0.81. The horizontal dashed line is the illustrative negative conventional threshold of -1.96. Figures transcribed from the source report; not independently reproduced.</desc>
+<rect width="900" height="485" rx="18" fill="#101827"/>
+<text x="40" y="48" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="700">Lookback sensitivity · regression t-statistics</text>
+<text x="40" y="76" fill="#a9b8ce" font-family="Arial, sans-serif" font-size="14">Reported event-study results · six pre-expiration windows</text>
+<rect x="76" y="99" width="665" height="257" rx="6" fill="#18243a"/>
+<g stroke="#34435b" stroke-width="1"><path d="M 96 114 H 715 M 96 164 H 715 M 96 214 H 715 M 96 264 H 715 M 96 314 H 715"/></g>
+<g fill="#c9d5e6" font-family="Arial, sans-serif" font-size="13" text-anchor="end"><text x="85" y="118">0</text><text x="85" y="168">-1</text><text x="85" y="218">-2</text><text x="85" y="268">-3</text><text x="85" y="318">-4</text></g>
+<line x1="96" y1="212" x2="715" y2="212" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="6 5"/>
+<text x="756" y="216" fill="#fbbf24" font-family="Arial, sans-serif" font-size="12">-1.96 reference</text>
+<polyline fill="none" stroke="#60a5fa" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" points="112,204 229,234 346,219.5 463,255.5 580,312 697,302"/>
+<polyline fill="none" stroke="#2dd4bf" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" points="112,130.5 229,93.5 346,96 463,166.5 580,114 697,154.5"/>
+<g fill="#60a5fa" stroke="#101827" stroke-width="1.5"><circle cx="112" cy="204" r="5"/><circle cx="229" cy="234" r="5"/><circle cx="346" cy="219.5" r="5"/><circle cx="463" cy="255.5" r="5"/><circle cx="580" cy="312" r="5"/><circle cx="697" cy="302" r="5"/></g>
+<g fill="#2dd4bf" stroke="#101827" stroke-width="1.5"><circle cx="112" cy="130.5" r="5"/><circle cx="229" cy="93.5" r="5"/><circle cx="346" cy="96" r="5"/><circle cx="463" cy="166.5" r="5"/><circle cx="580" cy="114" r="5"/><circle cx="697" cy="154.5" r="5"/></g>
+<g fill="#c9d5e6" font-family="Arial, sans-serif" font-size="14" text-anchor="middle"><text x="112" y="382">3</text><text x="229" y="382">5</text><text x="346" y="382">7</text><text x="463" y="382">10</text><text x="580" y="382">14</text><text x="697" y="382">21</text><text x="406" y="407">Pre-event lookback (trading days)</text></g>
+<line x1="752" y1="115" x2="788" y2="115" stroke="#60a5fa" stroke-width="4"/><text x="797" y="120" fill="#e7edf6" font-family="Arial, sans-serif" font-size="14">OPEX</text>
+<line x1="752" y1="144" x2="788" y2="144" stroke="#2dd4bf" stroke-width="4"/><text x="797" y="149" fill="#e7edf6" font-family="Arial, sans-serif" font-size="14">VIX expiry</text>
+<text x="40" y="448" fill="#b9c6d7" font-family="Arial, sans-serif" font-size="12">Source: OPEX Effect report, lookback-sensitivity table. Redrawn from report values, not a replication.</text>
+<text x="40" y="466" fill="#b9c6d7" font-family="Arial, sans-serif" font-size="12">Illustrative unadjusted threshold only; multiple testing, event counts and model assumptions remain unresolved.</text>
+</svg>
