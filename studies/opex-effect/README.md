@@ -2,9 +2,9 @@
 
 **Exploratory event study · SPY · historical research · results not independently replicated**
 
-[← Research library](../../README.md) · [Figure: lookback sensitivity](figures/lookback-sensitivity.svg)
+[← Research library](../../README.md) · [Figure: lookback sensitivity](figures/lookback-sensitivity.svg) · [PDF publication review](PUBLICATION_REVIEW.md)
 
-> **Reading note:** This case study is a structured presentation of the supplied *OPEX Effect — Backtest Report*, not a newly run backtest. All numerical results below are **reported by that document**. The original workbook, event log and price observations have not been supplied for independent reproduction. In particular, its stated event count needs reconciliation before any statistical inference can be relied upon.
+> **Reading note:** This case study presents the supplied *OPEX Effect — Backtest Report*; it is not a newly run backtest. All numerical results below are **reported by that document**. The original workbook, event log and price observations have not been supplied for independent reproduction. Both stated monthly-event counts need reconciliation before relying on the statistical inference.
 
 ## Research question
 
@@ -15,8 +15,8 @@ Does the magnitude of SPY's return **before** an equity-options expiration event
 | Design element | Implementation described in the report |
 |---|---|
 | Asset | SPY |
-| Equity-OPEX study window | January 2020–December 2025; **80 events claimed but not reconciled** |
-| VIX-expiration comparison window | May 2004–December 2025; 276 events claimed |
+| Equity-OPEX study window | January 2020–December 2025; **80 events claimed within 72 months, not reconciled** |
+| VIX-expiration comparison window | May 2004–December 2025; **276 events claimed within 260 months, not reconciled** |
 | Pre-event lookbacks | 3, 5, 7, 10, 14 and 21 trading days; 7 days is the default |
 | Forward horizons | 1, 2, 3, 5, 7, 10, 14 and 21 trading days |
 | Conditional groups | Pre-event return < 0: selloff; otherwise: rally |
@@ -46,7 +46,7 @@ For event date *t*, the explanatory variable is the return over the chosen windo
 
 ### 1. The conditional 7-day comparison
 
-These are the report's unreplicated regression outputs; its claimed group sizes sum to the unreconciled 80-event total.
+These are the report's unreplicated regression outputs; the group sizes sum to its unreconciled event totals.
 
 | Event group | Reported events | Beta | R² | t-statistic |
 |---|---:|---:|---:|---:|
@@ -95,7 +95,7 @@ A positive long-SPY return near an event may reflect the market's unconditional 
 
 ## Data quality and validation: checks before calling the effect tradable
 
-1. **Resolve the denominator.** January 2020 through December 2025 contains 72 calendar months, yet the report describes 80 *monthly* equity-OPEX dates. Obtain its `OPEX_Dates` sheet, list the exact dates, define the event types, and reconcile the 34/46 split.
+1. **Resolve both denominators.** January 2020–December 2025 spans 72 months but the report calls its OPEX sample 80 *monthly* dates; May 2004–December 2025 spans 260 months but it calls its VIX sample 276 *monthly* dates. Obtain the exact `OPEX_Dates` and `VIX_Expiry_Dates` lists, establish event types, and reconcile subgroup counts.
 2. **Verify information timing.** Establish whether event-day close and the pre-event signal can be observed before an order would be submitted; check holidays and VIX settlement conventions separately.
 3. **Use comparable windows.** The OPEX sample is 2020–2025 while the VIX sample is 2004–2025. Rerun both over a common historical interval before treating differences as supporting a mechanism.
 4. **Control the testing search.** Six lookbacks × eight horizons × subgroup splits are not one prespecified hypothesis. Assess multiple testing, overlapping observations and sensitivity to March 2020.
@@ -103,8 +103,8 @@ A positive long-SPY return near an event may reflect the market's unconditional 
 6. **Validate prospectively.** Freeze the rules, test an untouched time period and, if feasible, an additional ETF universe before making claims about repeatability.
 7. **Test the causal explanation.** Obtain appropriate dealer-gamma or hedging-flow proxies if the aim is to claim an expiration-flow mechanism rather than an event-date correlation.
 
-## Source material and publication status
+## Full paper and publication status
 
-The supplied PDF contains the complete original research narrative, regression tables, forward-return analysis, hypothetical equity curves and figure captions. An editorially qualified PDF edition has been prepared offline, but **is not yet publicly linked** because third-party redistribution rights and a final review of its embedded graphics are unresolved. Underlying workbook and raw event-level data have not been provided. Once cleared, the report can be linked here without replacing this illustrated summary.
+An editorially prepared **full PDF edition** preserves the supplied research text, charts, tables, results and captions and adds a publication notice. It is **not yet uploaded to this GitHub repository**; binary upload and confirmation of the source graphics/data's distribution rights remain outstanding. [Read the PDF's visual review and issue log](PUBLICATION_REVIEW.md). Once its file has been uploaded to this directory and verified, a working PDF download link can be added here. No underlying workbook or event-level data has been supplied.
 
 **Research-only disclosure:** This is exploratory historical analysis, not verified live performance or a recommendation to trade around options expiration.
